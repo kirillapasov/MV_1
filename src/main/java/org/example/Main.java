@@ -62,15 +62,22 @@ public class Main {
         Vector vector = null;
         switch (point) {
             case 1:
+                matrix = new TridiagonalMatrix(); // Инициализация matrix
+                vector = new Vector(); // Инициализация vector
                 readFromConsole(scanner, matrix, vector);
                 break;
             case 2:
+                matrix = new TridiagonalMatrix(); // Инициализация matrix
+                vector = new Vector(); // Инициализация vector
                 readFromFile(scanner, matrix, vector);
                 break;
             default:
+                matrix = new TridiagonalMatrix(); // Инициализация matrix
+                vector = new Vector(); // Инициализация vector
                 readFromConsole(scanner, matrix, vector);
                 break;
         }
+
         System.out.println("Решение методом прогонки: " + Solve.tridiagonalMatrixAlgorithm(matrix, vector).toString());
         System.out.println("Решение неустойчивым методом: " + Solve.unstableSolve(matrix, vector).toString());
     }
